@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Message Form</h1>
-<form action="process" th:object="${message}" method="post"
+<form method="POST" action="/process" th:object="${message}"
       enctype="multipart/form-data">
     Content :<input type="text" th:field="*{content}" />
     <span th:if="${#fields.hasErrors('content')}"
